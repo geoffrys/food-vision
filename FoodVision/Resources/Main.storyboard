@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.30.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.19.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="FoodVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nvV-1F-zG0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arskView contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-DR-jeL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arskView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szV-2s-0uV" userLabel="Drawer View" customClass="DrawerView" customModule="FoodVision" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1B6-OJ-mfr" userLabel="Waiting View">
+                                        <rect key="frame" x="8" y="60" width="359" height="140"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="0WR-jX-91h" userLabel="Berry Spinner" customClass="BerrySpinner" customModule="FoodVision" customModuleProvider="target">
+                                                <rect key="frame" x="35.5" y="0.0" width="288" height="60"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cherry" translatesAutoresizingMaskIntoConstraints="NO" id="15h-xE-I34" userLabel="cherry">
+                                                        <rect key="frame" x="0.0" y="36" width="96" height="24"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raspberry" translatesAutoresizingMaskIntoConstraints="NO" id="2WG-hG-dWg">
+                                                        <rect key="frame" x="96" y="36" width="96" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="KRI-wM-Rzg"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="strawberry" translatesAutoresizingMaskIntoConstraints="NO" id="Aaq-DS-6yf">
+                                                        <rect key="frame" x="192" y="36" width="96" height="24"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Aaq-DS-6yf" firstAttribute="height" secondItem="2WG-hG-dWg" secondAttribute="height" id="7EM-eK-pK7"/>
+                                                    <constraint firstItem="15h-xE-I34" firstAttribute="height" secondItem="2WG-hG-dWg" secondAttribute="height" id="jqB-Sq-sYZ"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="cherry" destination="15h-xE-I34" id="Ijq-OI-uGv"/>
+                                                    <outlet property="raspberry" destination="2WG-hG-dWg" id="CQi-dM-YIJ"/>
+                                                    <outlet property="strawberry" destination="Aaq-DS-6yf" id="fzF-BE-1AY"/>
+                                                </connections>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="h7a-P8-Gby" userLabel="Looking Stack">
+                                                <rect key="frame" x="111" y="80" width="137.5" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.35999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking for berries..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SS-hv-xJx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="137.5" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DAV-Kv-YHk" userLabel="Nutrition View">
+                                        <rect key="frame" x="16" y="4" width="343" height="176"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="p9U-hh-guT" userLabel="Food List">
+                                                <rect key="frame" x="0.0" y="26" width="343" height="124"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="76n-pB-5wm" userLabel="Header View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.87" contentMode="left" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWl-tU-5i1" userLabel="Total Label">
+                                                                <rect key="frame" x="0.0" y="0.0" width="233" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.54000000000000004" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" text="## g • ## cal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhO-d9-2aV" userLabel="Total Values">
+                                                                <rect key="frame" x="243" y="0.0" width="100" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view alpha="0.12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLv-bC-cWT">
+                                                        <rect key="frame" x="0.0" y="35" width="343" height="1"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="OVg-I6-70Q"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pef-Es-sJo" userLabel="Raspberry View">
+                                                        <rect key="frame" x="0.0" y="49" width="343" height="24"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="raspberry" translatesAutoresizingMaskIntoConstraints="NO" id="mgh-Gc-1um">
+                                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="Z1E-uB-ybN"/>
+                                                                    <constraint firstAttribute="width" secondItem="mgh-Gc-1um" secondAttribute="height" multiplier="1:1" id="fwz-3O-pdN"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.87" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# raspberries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiw-dp-R7S" userLabel="Raspberry Label">
+                                                                <rect key="frame" x="44" y="0.0" width="179" height="24"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.54000000000000004" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" verticalCompressionResistancePriority="251" text="## g • ## cal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPs-rw-Jp0" userLabel="Raspberry Values">
+                                                                <rect key="frame" x="243" y="0.0" width="100" height="24"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view alpha="0.12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="259-92-c6a">
+                                                        <rect key="frame" x="0.0" y="86" width="343" height="1"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="gar-B8-iCO"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fMb-GV-PJK" userLabel="Strawberry View">
+                                                        <rect key="frame" x="0.0" y="100" width="343" height="24"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="strawberry" translatesAutoresizingMaskIntoConstraints="NO" id="gyi-7M-JWa">
+                                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="2ub-ZH-Let"/>
+                                                                    <constraint firstAttribute="width" secondItem="gyi-7M-JWa" secondAttribute="height" multiplier="1:1" id="L0Y-Ns-YgA"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.87" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# strawberries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DH6-jl-cRz" userLabel="Strawberry Label">
+                                                                <rect key="frame" x="44" y="0.0" width="179" height="24"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.54000000000000004" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="251" verticalCompressionResistancePriority="251" text="## g • ## cal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jh-kY-gTR" userLabel="Strawberry Values">
+                                                                <rect key="frame" x="243" y="0.0" width="100" height="24"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="YhB-Lj-CXH"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1B6-OJ-mfr" secondAttribute="bottomMargin" id="0xq-ZP-II0"/>
+                                    <constraint firstItem="DAV-Kv-YHk" firstAttribute="leading" secondItem="szV-2s-0uV" secondAttribute="leading" constant="16" id="4S7-hj-mqA"/>
+                                    <constraint firstItem="1B6-OJ-mfr" firstAttribute="centerY" secondItem="szV-2s-0uV" secondAttribute="centerYWithinMargins" constant="30" id="78N-vh-Q7C"/>
+                                    <constraint firstItem="DAV-Kv-YHk" firstAttribute="centerY" secondItem="szV-2s-0uV" secondAttribute="centerY" constant="-8" id="Dpv-5R-91A"/>
+                                    <constraint firstAttribute="bottom" secondItem="DAV-Kv-YHk" secondAttribute="bottom" constant="20" id="Hfr-iK-2U6"/>
+                                    <constraint firstItem="DAV-Kv-YHk" firstAttribute="centerX" secondItem="szV-2s-0uV" secondAttribute="centerX" id="SZe-hc-7tB"/>
+                                    <constraint firstItem="1B6-OJ-mfr" firstAttribute="centerX" secondItem="szV-2s-0uV" secondAttribute="centerXWithinMargins" id="jI7-mF-IgT"/>
+                                    <constraint firstItem="1B6-OJ-mfr" firstAttribute="leading" secondItem="szV-2s-0uV" secondAttribute="leadingMargin" id="m5E-ca-7Oc"/>
+                                    <constraint firstAttribute="height" constant="200" id="mDU-RM-hG5"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="nutritionView" destination="DAV-Kv-YHk" id="9xe-QB-hYw"/>
+                                    <outlet property="raspberryLabel" destination="eiw-dp-R7S" id="bZH-HH-w1o"/>
+                                    <outlet property="raspberryValues" destination="hPs-rw-Jp0" id="7cb-Ne-kYB"/>
+                                    <outlet property="strawberryLabel" destination="DH6-jl-cRz" id="7wN-k4-QJT"/>
+                                    <outlet property="strawberryValues" destination="4jh-kY-gTR" id="3cH-2h-w1z"/>
+                                    <outlet property="totalValues" destination="HhO-d9-2aV" id="B6f-QQ-58k"/>
+                                    <outlet property="waitingView" destination="1B6-OJ-mfr" id="D4Y-dk-iY6"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXB-oo-rte" userLabel="Reset Button">
+                                <rect key="frame" x="294" y="20" width="61" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="9" minY="7" maxX="9" maxY="7"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressReset:" destination="BV1-FR-VrT" eventType="touchUpInside" id="TUD-DU-pEv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AXB-oo-rte" firstAttribute="top" secondItem="B6f-8k-vfK" secondAttribute="top" id="0Xo-NH-n5y"/>
+                            <constraint firstItem="szV-2s-0uV" firstAttribute="bottom" secondItem="nvV-1F-zG0" secondAttribute="bottom" id="6HQ-vG-mX8"/>
+                            <constraint firstAttribute="trailing" secondItem="jqe-DR-jeL" secondAttribute="trailing" id="6ro-1N-Hqg"/>
+                            <constraint firstItem="jqe-DR-jeL" firstAttribute="leading" secondItem="nvV-1F-zG0" secondAttribute="leading" id="DQd-eh-RqD"/>
+                            <constraint firstAttribute="bottom" secondItem="jqe-DR-jeL" secondAttribute="bottom" id="QN7-zf-j79"/>
+                            <constraint firstItem="B6f-8k-vfK" firstAttribute="trailing" secondItem="AXB-oo-rte" secondAttribute="trailing" constant="20" id="dxb-Ne-7M2"/>
+                            <constraint firstItem="jqe-DR-jeL" firstAttribute="top" secondItem="nvV-1F-zG0" secondAttribute="top" id="fVF-cf-3wW"/>
+                            <constraint firstItem="szV-2s-0uV" firstAttribute="trailing" secondItem="nvV-1F-zG0" secondAttribute="trailing" id="jEk-wY-qxG"/>
+                            <constraint firstItem="szV-2s-0uV" firstAttribute="leading" secondItem="nvV-1F-zG0" secondAttribute="leading" id="tpK-O6-b9V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B6f-8k-vfK"/>
+                    </view>
+                    <connections>
+                        <outlet property="berrySpinner" destination="0WR-jX-91h" id="IQr-hP-jUQ"/>
+                        <outlet property="drawerHeight" destination="mDU-RM-hG5" id="HnJ-zI-apb"/>
+                        <outlet property="drawerView" destination="szV-2s-0uV" id="Odb-8Y-Nxr"/>
+                        <outlet property="resetButton" destination="AXB-oo-rte" id="5SD-to-mBt"/>
+                        <outlet property="sceneView" destination="jqe-DR-jeL" id="uyS-W6-Mhi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="f0K-i8-Pgm">
+                    <connections>
+                        <action selector="placeLabelAtLocationWithSender:" destination="BV1-FR-VrT" id="vPA-Z5-obT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="-985.45727136431788"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cherry" width="96" height="96"/>
+        <image name="raspberry" width="96" height="96"/>
+        <image name="strawberry" width="96" height="96"/>
+    </resources>
+</document>
